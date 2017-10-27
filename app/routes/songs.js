@@ -1,14 +1,14 @@
-// app/routes/application.js
 import Ember from 'ember';
+
 
 var Song = Ember.Object.extend({
   title: '',
-  band: '',
-  rating: 0
+  rating: 0,
+  band: ''
 });
 
 export default Ember.Route.extend({
-  model: function() {
+  model: function () {
     var blackDog = Song.create({
       title: 'Black Dog',
       band: 'Led Zeppelin',

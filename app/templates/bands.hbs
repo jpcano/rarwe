@@ -10,8 +10,7 @@ new-band-button" disabled={{isAddButtonDisabled}}>Add
       </form>
     </div>
     {{#each model as |band|}}
-      {{#link-to "bands.band.songs" band class="list-group-item
-band-link"}}
+      {{#link-to "bands.band" band class="list-group-item band-link"}}
         {{band.name}}
         <span class="pointer glyphicon glyphicon-chevron-right"></span>
       {{/link-to}}

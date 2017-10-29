@@ -47,41 +47,16 @@ test('List bands', function (assert) {
 
 test('Create a new band', function (assert) {
   server = new Pretender(function () {
-    this.get('/bands', function () {
-      var response = {
-        data: [
-          {
-            id: 1,
-            type: 'bands',
-            attributes: {
-              name: 'Radiohead'
-            }
-          }
-        ]
-      };
-      return [200, {'Content-Type': 'application/vnd.api+json'},
-        JSON.stringify(response)];
-    });
-    this.post('/bands', function () {
-      var response = {
-        data: {
-          id: 2,
-          type: 'bands',
-          attributes: {
-            name: 'Long Distance Calling'
-          }
+    httpStubs.stubBands(this, [
+      {
+        id: 1,
+        attributes: {
+          name: 'Radiohead'
         }
-      };
-      return [200, {'Content-Type': 'application/vnd.api+json'},
-        JSON.stringify(response)];
-    });
-    this.get('/bands/2/songs', function () {
-      var response = {
-        data: []
-      };
-      return [200, {'Content-Type': 'application/vnd.api+json'},
-        JSON.stringify(response)];
-    });
+      }
+    ]);
+    httpStubs.stubCreateBand(this, 2);
+    httpStubs.stubSongs(this, 2, []);
   });
   visit('/bands');
   fillIn('.new-band', 'Long Distance Calling');

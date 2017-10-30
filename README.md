@@ -1,7 +1,6 @@
 # rarwe
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+My solution to xxx test. There is a demo [here](http://jesus.engineer/carto-fe1).
 
 ## Prerequisites
 
@@ -9,42 +8,60 @@ You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with NPM)
-* [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
+* [Ember CLI](https://ember-cli.com/) (version 2.15.1): ` npm install -g ember-cli@2.15.1`
+* [Surge](https://surge.sh) (Optional: for deploying): `npm install -g surge`
 
-## Installation
 
-* `git clone <repository-url>` this repository
+## How to install
+
+* `git clone <repository-url>` 
 * `cd rarwe`
 * `npm install`
 
-## Running / Development
+## How to run
 
 * `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit the app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+## How to test
 
-Make use of the many generators for code, try `ember help generate` for more details
+A battery of acceptance and integration tests can be launched with:
 
-### Running Tests
-
-* `ember test`
 * `ember test --server`
 
-### Building
+<!-- ## How to build -->
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+<!-- The app can be built on `./dist` directory with: -->
 
-### Deploying
+<!-- * `ember build` (development) -->
+<!-- * `ember build --environment production` (production) -->
 
-Specify what it takes to deploy your app.
+## How to deploy
 
-## Further Reading / Useful Links
+Surge is used to deploy this application on [http://repositive.jesus.engineer](http://repositive.jesus.engineer):
 
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+```
+ $ cd 
+ $ surge login
+ $ ember surge --environment production
+  ```
+
+## Decisions taken
+
+### Ember.js as the browser application framework
+
+asdfasdfasdf
+asdf
+
+### Master-Detail UI pattern
+
+asdfasdf
+
+### Stubbing out XHR requests only for testing
+
+asdfa
+sdf
+asdf
+asd
+f
